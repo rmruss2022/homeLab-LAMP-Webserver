@@ -1,0 +1,47 @@
+/* 
+ *                       * 
+ * Grid container layout *
+ *                       *
+ */
+ .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 10px; 
+       
+}
+.grid-container > div {
+    margin: auto;
+    margin-top: 30px;
+    /***background-color: rgb(193, 240, 255);*/
+    background-color: white; /*#ceeaed;*/
+    border-style:solid;
+    border-width: 1em;
+    border-color: rgb(193, 240, 255);
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-right: 6em;
+    padding-left: 6em;
+    
+}
+.headings {
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.rs-tooltip.rs-tooltip-text {
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: .5em;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    /*border: solid black 2px; */
+}

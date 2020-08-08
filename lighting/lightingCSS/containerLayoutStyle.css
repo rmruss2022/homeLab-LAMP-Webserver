@@ -1,0 +1,30 @@
+/* 
+ *                       * 
+ * Grid container layout *
+ *                       *
+ */
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        padding: 10px; 
+           
+    }
+    .grid-container > div {
+
+        /***background-color: rgb(193, 240, 255);*/
+        background-color: rgb(193, 240, 255); /*#ceeaed;*/
+        border-style:solid;
+        border-width: 0.02em;
+        border-color: gray;
+        border-radius: .5em;
+        text-align: center;
+        padding: .2em;
+        padding-top: 0;
+        padding-bottom: .15em;
+        
+    }
+    .headings {
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+    }
