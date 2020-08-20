@@ -118,7 +118,7 @@
 
     </div>
 
-    <div class="lockContainer">
+    <div class="lockContainer" onclick="lockClick()">
         <div class="lock" >
             <div class="unlocker"></div>
         </div>
@@ -127,6 +127,10 @@
 <!-- get slider value and call setBri function 
     in alterLights.js -->
 <script>
+
+    function lockClick() {
+        $('.unlocker').toggleClass('.unlockAnimation');
+    }
 
     function goToThermostat() {
         document.getElementById("btnTherm").style.backgroundColor="rgb(193, 240, 255)";

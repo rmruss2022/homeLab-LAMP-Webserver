@@ -8,17 +8,17 @@
 }
 
 .unlocker{
-    width: 28px;
-    height: 24px;
-    background: transparent;
-    border: 6px solid grey;
-    border-bottom: 0;
-    border-radius: 15px 15px 0 0;
-    position: absolute;
-    top: -24px;
-    left: 12px;
-    -webkit-transition: all 1s;
-  }
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: 6px solid grey;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: -24px;
+  left: 12px;
+  -webkit-transition: all 1s;
+}
   
   .lock{
   
@@ -32,13 +32,13 @@
     margin: 70px;
     left: -18px;
     top: 20px;
-      -webkit-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     margin-left: 38px;
     margin-top: 13px;
   }
   
-  .lock:hover .unlocker{
-      -webkit-transform: rotateY(-180deg);
+  .lock:active .unlocker { 
+    -webkit-transform: rotateY(-180deg);
     margin-top:-10px;
   }
   

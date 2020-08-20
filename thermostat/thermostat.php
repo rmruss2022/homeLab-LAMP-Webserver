@@ -32,6 +32,16 @@
           <button class="setButton" onclick="setTemp()">Set</button>
         
         </div>
+
+        <div class="item">
+
+          <p>First Floor Temp</p> 
+
+          <input type="range" id="myRange1">
+
+          <button class="setButton" onclick="setTemp1()">Set</button>
+        
+        </div>
         
     </div>
 
@@ -53,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(intResult);
         
         $('#myRange').roundSlider('setValue', intResult);
+        $('#myRange1').roundSlider('setValue', 72);
     });
 
 
@@ -80,9 +91,39 @@ function setTemp() {
 
 }
 
+function setTemp1() {
+  var sliderTemp = document.getElementById("myRange1");
+  var temp = sliderTemp.value;
+  temp = temp.toString();
+  console.log(temp);
+  $.ajax({
+        url: "http://192.168.6.37:5000/firstFloorTemp", 
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({"temperature" : temp }),
+        context: document.body
+    }).done(function(result) {
+        var intResult = Math.round( result );
+        console.log(intResult);
+        $('#myRange').roundSlider('setValue', intResult);
+    });
+
+}
+
 
     // you need to bind `.roundSlider()` with the `id = 'myRange'`.
     $("#myRange").roundSlider({
+        sliderType: "min-range",
+        circleShape: "half-top",
+        handleShape: "round",
+        width: 50, // width of the roundSlider
+        radius: 250, // radius size
+        value: 72,
+        max: 78,
+        min: 65
+    });
+
+    $("#myRange1").roundSlider({
         sliderType: "min-range",
         circleShape: "half-top",
         handleShape: "round",
